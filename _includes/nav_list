@@ -37,7 +37,11 @@
               {% assign active = "" %}
             {% endif %}
 
-            <li><a href="{{ domain }}{{ child.url }}" class="{{ active }}">{{ child.title }}</a></li>
+            <li class="nav-item {{ active }}">
+              <a href="{{ domain }}{{ child.url }}">
+                <div>{{ child.title }}</div>
+              </a>
+            </li>
           {% endfor %}
         </ul>
         {% endif %}
